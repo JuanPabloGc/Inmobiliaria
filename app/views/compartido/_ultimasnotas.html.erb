@@ -1,0 +1,14 @@
+
+
+<%# @notas %>
+
+<ul>
+<% @notas.each do  |nota| %>
+   <li>
+   <b><%= link_to nota.titulo, nota %></b> <br />
+   <%= nota.contenido.truncate(2,  :omission => "...") %>
+   <%= link_to "(ver mas)", nota %>
+   </li>
+   <br />
+<% end %>
+</ul>  
